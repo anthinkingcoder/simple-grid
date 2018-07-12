@@ -1,0 +1,111 @@
+$prefix: '.simple';
+$rowPrefix: '#{$prefix}-row';
+$colPrefix: '#{$prefix}-col';
+$flexRowPrefix: '#{$rowPrefix}-flex';
+$gridCol: 24;
+$justifies: ('start','end','center','space-around','space-between');
+$aligns: ('top':'flex-start','middle':'center','bottom':'flex-end');
+
+
+@mixin generate-row {
+
+  #{$rowPrefix} {
+    display: block;
+    position: relative;
+    margin: 0;
+    height: auto;
+    zoom: 1;
+    overflow: scroll;
+  }
+
+  #{$flexRowPrefix} {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  #{$colPrefix} {
+    display: block;
+    position: relative;
+  }
+
+  @each $justify in $justifies {
+    #{$flexRowPrefix}-#{$justify} {
+      justify-content: #{$justify};
+    }
+  }
+
+  @each $key,$value in $aligns {
+    #{$flexRowPrefix}-#{$key} {
+      align-items: #{$value};
+    }
+  }
+}
+
+@mixin generate-float-col($viewport:'') {
+  $cols: '#{$colPrefix}-span#{$viewport}-1';
+  @for $i from 2 through $gridCol {
+    $cols: '#{$cols},#{$colPrefix}-span#{$viewport}-#{$i},';
+  }
+  #{$cols} {
+    float: left;
+    flex: 0 0 auto;
+  }
+}
+
+@mixin generate-col($viewport: '') {
+  @for $i from 1 through $gridCol {
+    #{$colPrefix}-span#{$viewport}-#{$i} {
+      width: percentage($i / $gridCol);
+    }
+
+    #{$colPrefix}-push#{$viewport}-#{$i} {
+      left: percentage($i / $gridCol);
+    }
+
+    #{$colPrefix}-pull#{$viewport}-#{$i} {
+      right: percentage($i / $gridCol);
+    }
+
+    #{$colPrefix}-offset#{$viewport}-#{$i} {
+      margin-left: percentage($i / $gridCol);
+    }
+  }
+}
+
+@mixin generate-grid($viewport) {
+  @include generate-float-col($viewport);
+  @include generate-col($viewport);
+}
+
+
+
+
+
+@include generate-row();
+@include generate-grid('');
+
+@media (max-width: 768px) {
+  @include generate-grid('-xs');
+}
+
+@media (min-width: 768px) {
+  @include generate-grid('-sm');
+}
+
+@media (min-width: 992px) {
+  @include generate-grid('-md');
+}
+
+@media (min-width: 1200px) {
+  @include generate-grid('-lg');
+}
+
+
+
+
+
+
+
+
+
