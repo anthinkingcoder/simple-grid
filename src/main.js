@@ -3,7 +3,8 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import grid from './styles/grid.scss'
+import Grid from './components'
+Vue.use(Grid);
 Vue.config.productionTip = false
 /* eslint-disable no-new */
 new Vue({

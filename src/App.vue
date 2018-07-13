@@ -101,14 +101,8 @@
   </div>
 </template>
 <script>
-  import Row from './components/row.vue';
-  import Col from './components/col.vue';
   export default {
-    name: 'App',
-    components: {
-      Row,
-      Col
-    }
+    name: 'App'
   }
 </script>
 <style>
