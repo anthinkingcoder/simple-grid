@@ -1,6 +1,14 @@
 # simple-grid
 > a simple grid layout
 
+> to install it 
+
+> npm i simple-xgrid --save
+
+> to use it
+
+> import Grid from 'simple-xgrid'
+> Vue.use(Grid);
 ## 1.examples
 ```html
     <Row>

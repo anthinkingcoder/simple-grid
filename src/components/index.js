@@ -8,3 +8,7 @@ const Grid = {
   }
 };
 export default Grid;
+export {
+  Col,
+  Row
+}
