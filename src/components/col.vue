@@ -62,10 +62,13 @@
         return list;
       },
       colStyle() {
-        return this.gutter !== 0 ? {
+        let colStyle = this.gutter !== 0 ? {
           'padding-left': `${this.gutter / 2}px`,
           'padding-right': `${this.gutter / 2}px`
-        } : {}
+        } : {};
+        return this.order ? {...colStyle,
+          order: this.order
+        }: colStyle;
       },
     },
     mounted () {
