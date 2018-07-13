@@ -101,4 +101,4 @@
     </Row>
 ```
 ## 2.效果
-![](./static/grid.png)
+![](static/images/grid.png)

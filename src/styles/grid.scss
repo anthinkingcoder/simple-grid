@@ -79,10 +79,6 @@ $gridCol: 24;
   @include generate-col($viewport);
 }
 
-
-
-
-
 @include generate-row();
 @include generate-grid('');
 
