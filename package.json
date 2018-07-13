@@ -1,9 +1,9 @@
 {
-  "name": "simple-grid",
+  "name": "simple-xgrid",
   "version": "1.0.0",
   "description": "a simple grid layout",
-  "author": "anthinkingcoder <zhoul@3vjia.com>",
-  "private": true,
+  "author": "anthinkingcoder jojo837769723@gmail.com",
+  "private": false,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",

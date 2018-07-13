@@ -3,27 +3,16 @@
     <slot></slot>
   </div>
 </template>
-
 <script>
   const COL_PREFIX = 'simple-col';
   export default {
     name:COL_PREFIX,
     props: {
-      span: {
-        type: Number
-      },
-      order: {
-        type: Number
-      },
-      offset: {
-        type: Number
-      },
-      push: {
-        type: Number
-      },
-      pull: {
-        type: Number
-      },
+      span: {type: Number},
+      order: {type: Number},
+      offset: {type: Number},
+      push: {type: Number},
+      pull: {type: Number},
       xs: {},
       sm: {},
       md: {},
@@ -79,7 +68,3 @@
   }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-
-</style>
