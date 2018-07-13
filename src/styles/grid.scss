@@ -15,7 +15,7 @@ $aligns: ('top':'flex-start','middle':'center','bottom':'flex-end');
     margin: 0;
     height: auto;
     zoom: 1;
-    overflow: scroll;
+    overflow: hidden;
   }
 
   #{$flexRowPrefix} {
@@ -28,7 +28,9 @@ $aligns: ('top':'flex-start','middle':'center','bottom':'flex-end');
     display: block;
     position: relative;
   }
-
+  #{$flexRowPrefix},#{$flexRowPrefix},#{$colPrefix} {
+    box-sizing: border-box;
+  }
   @each $justify in $justifies {
     #{$flexRowPrefix}-#{$justify} {
       justify-content: #{$justify};

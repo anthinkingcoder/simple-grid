@@ -1,5 +1,5 @@
 <template>
-  <div :class="rowClassList">
+  <div :class="rowClassList" :style="rowStyle">
     <slot></slot>
   </div>
 </template>
@@ -8,6 +8,7 @@
   const ROW_PREFIX = 'simple-row';
   const ROW_FLEX_PREFIX = `${ROW_PREFIX}-flex`;
   export default {
+    name:ROW_PREFIX,
     props: {
       gutter: {
         type: Number
@@ -38,7 +39,8 @@
       },
     },
     data() {
-      return {}
+      return {
+      }
     },
     computed: {
       rowClassList() {
@@ -51,6 +53,25 @@
         }
         list.push({[`${this.className}`]: this.className});
         return list;
+      },
+      rowStyle() {
+        return this.gutter !== 0 ? {
+          'margin-left': `${-this.gutter/2}px`,
+          'margin-right': `${-this.gutter/2}px`
+        } : {};
+      }
+    },
+    mounted() {
+
+    },
+    methods: {
+      updateGutter() {
+        this.$children.forEach(children => {
+          let componentName = children.$options.name;
+          if (componentName === 'simple-col') {
+            children.gutter = this.gutter;
+          }
+        });
       }
     }
   }

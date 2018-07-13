@@ -7,6 +7,7 @@
 <script>
   const COL_PREFIX = 'simple-col';
   export default {
+    name:COL_PREFIX,
     props: {
       span: {
         type: Number
@@ -61,10 +62,15 @@
         return list;
       },
       colStyle() {
-        return {
-          'padding-left': this.gutter / 2 + 'px',
-          'padding-right': this.gutter / 2 + 'px'
-        }
+        return this.gutter !== 0 ? {
+          'padding-left': `${this.gutter / 2}px`,
+          'padding-right': `${this.gutter / 2}px`
+        } : {}
+      },
+    },
+    mounted () {
+      if (this.$parent.$options.name === 'simple-row') {
+        this.$parent.updateGutter();
       }
     }
   }
