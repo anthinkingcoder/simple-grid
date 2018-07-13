@@ -2,10 +2,9 @@ $prefix: '.simple';
 $rowPrefix: '#{$prefix}-row';
 $colPrefix: '#{$prefix}-col';
 $flexRowPrefix: '#{$rowPrefix}-flex';
+$flexJustifies: ('start','end','center','space-around','space-between');
+$flexAligns: ('top':'flex-start','middle':'center','bottom':'flex-end');
 $gridCol: 24;
-$justifies: ('start','end','center','space-around','space-between');
-$aligns: ('top':'flex-start','middle':'center','bottom':'flex-end');
-
 
 @mixin generate-row {
 
@@ -31,13 +30,13 @@ $aligns: ('top':'flex-start','middle':'center','bottom':'flex-end');
   #{$flexRowPrefix},#{$flexRowPrefix},#{$colPrefix} {
     box-sizing: border-box;
   }
-  @each $justify in $justifies {
+  @each $justify in $flexJustifies {
     #{$flexRowPrefix}-#{$justify} {
       justify-content: #{$justify};
     }
   }
 
-  @each $key,$value in $aligns {
+  @each $key,$value in $flexAligns {
     #{$flexRowPrefix}-#{$key} {
       align-items: #{$value};
     }
