@@ -8,6 +8,7 @@
 > to use it
 
 > import Grid from 'simple-xgrid'
+
 > Vue.use(Grid);
 ## 1.examples
 ```html
