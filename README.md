@@ -1,7 +1,8 @@
 # simple-grid
 > a simple grid layout
-  examples:
-  <div id="app">
+
+## 1.examples
+```html
     <Row>
       <Col :span="4" class="demo-col">span:4</Col>
       <Col :span="4" class="demo-col">span:4</Col>
@@ -98,5 +99,6 @@
       order:3
       </Col>
     </Row>
-  </div>
-![栅格布局](./static/grid.png)
+```
+## 2.效果
+![](./static/grid.png)
