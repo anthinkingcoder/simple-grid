@@ -1,7 +1,7 @@
 # simple-grid
 > a simple grid layout(Vue Component)
 
-##Installation
+## Installation
 ```bash
 npm i simple-xgrid --save
 import Grid from 'simple-xgrid'
