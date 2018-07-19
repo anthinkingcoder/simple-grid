@@ -7,6 +7,28 @@ npm i simple-xgrid --save
 import Grid from 'simple-xgrid'
 Vue.use(Grid);
 ```
+## Row Component
+### row props
+| param | description | type | default |
+| :-: | :-: | :-: | :-: |
+| gutter | Grid spacing in pixels, split equally left and right | Number | 0 |
+| type | Layout mode. Can optionally make use of flex in a modern browser. | String |  |
+| align | Vertical alignment of flex layout. You can choose between top, middle, bottom. | String |  |
+| justify | Horizontal arrangement of flex layout. You can choose between start, end, center, space-around, space-between. | String |  |
+| type | Layout mode. Can optionally make use of flex in a modern browser. | String |  |
+## Col Component
+### col props
+| param | description | type | default |
+| :-: | :-: | :-: | :-: |
+| span | Column span. Value can be between 1 and 24. | Number |  |
+| order | Grid order when using flex layout. | Number |  |
+| offset | Number of cells to the left of grid spacing. No cells can be inside the grid spacing. | Number |  |
+| push | Number of cells to move to the right | Number |  |
+| pull | Number of cells to move to the left | Number |  |
+| xs | <768px can be a span value or an object containing props | Number|Object |  |
+| sm | >768px can be a span value or an object containing props | Number|Object |  |
+| md | ≥992px can be a span value or an object containing props | Number|Object |  |
+| lg | ≥1200px can be a span value or an object containing props | Number|Object |  |
 ## examples
 ```html
     <Row>
