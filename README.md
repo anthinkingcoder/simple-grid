@@ -1,15 +1,12 @@
 # simple-grid
-> a simple grid layout
+> a simple grid layout(Vue Component)
 
-> to install it 
+```bash
+npm i simple-xgrid --save
+import Grid from 'simple-xgrid'
+Vue.use(Grid);
+```
 
-> npm i simple-xgrid --save
-
-> to use it
-
-> import Grid from 'simple-xgrid'
-
-> Vue.use(Grid);
 ## 1.examples
 ```html
     <Row>
@@ -109,5 +106,5 @@
       </Col>
     </Row>
 ```
-## 2.效果
+## 2.result
 ![](http://ofn22jfef.bkt.clouddn.com/grid.png)

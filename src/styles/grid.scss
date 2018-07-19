@@ -2,8 +2,8 @@ $prefix: '.simple';
 $rowPrefix: '#{$prefix}-row';
 $colPrefix: '#{$prefix}-col';
 $flexRowPrefix: '#{$rowPrefix}-flex';
-$flexJustifies: ('start','end','center','space-around','space-between');
-$flexAligns: ('top':'flex-start','middle':'center','bottom':'flex-end');
+$flexJustifies: ('start', 'end', 'center', 'space-around', 'space-between');
+$flexAligns: ('top':'flex-start', 'middle':'center', 'bottom':'flex-end');
 $gridCol: 24;
 @mixin generate-row {
   #{$rowPrefix} {
@@ -23,7 +23,7 @@ $gridCol: 24;
     display: block;
     position: relative;
   }
-  #{$flexRowPrefix},#{$flexRowPrefix},#{$colPrefix} {
+  #{$flexRowPrefix}, #{$flexRowPrefix}, #{$colPrefix} {
     box-sizing: border-box;
   }
   @each $justify in $flexJustifies {
@@ -31,12 +31,13 @@ $gridCol: 24;
       justify-content: #{$justify};
     }
   }
-  @each $key,$value in $flexAligns {
+  @each $key, $value in $flexAligns {
     #{$flexRowPrefix}-#{$key} {
       align-items: #{$value};
     }
   }
 }
+
 @mixin generate-float-col($viewport:'') {
   $cols: '#{$colPrefix}-span#{$viewport}-1';
   @for $i from 2 through $gridCol {
@@ -47,6 +48,7 @@ $gridCol: 24;
     flex: 0 0 auto;
   }
 }
+
 @mixin generate-col($viewport: '') {
   @for $i from 1 through $gridCol {
     #{$colPrefix}-span#{$viewport}-#{$i} {
@@ -66,24 +68,32 @@ $gridCol: 24;
     }
   }
 }
+
 @mixin generate-grid($viewport) {
   @include generate-float-col($viewport);
   @include generate-col($viewport);
 }
+
 @include generate-row();
 @include generate-grid('');
 @media (max-width: 768px) {
   @include generate-grid('-xs');
 }
+
 @media (min-width: 768px) {
   @include generate-grid('-sm');
 }
+
 @media (min-width: 992px) {
   @include generate-grid('-md');
 }
+
 @media (min-width: 1200px) {
   @include generate-grid('-lg');
 }
+
+
+
 
 
 
