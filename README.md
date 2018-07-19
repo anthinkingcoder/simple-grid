@@ -25,10 +25,10 @@ Vue.use(Grid);
 | offset | Number of cells to the left of grid spacing. No cells can be inside the grid spacing. | Number |  |
 | push | Number of cells to move to the right | Number |  |
 | pull | Number of cells to move to the left | Number |  |
-| xs | <768px can be a span value or an object containing props | Number|Object |  |
-| sm | >768px can be a span value or an object containing props | Number|Object |  |
-| md | ≥992px can be a span value or an object containing props | Number|Object |  |
-| lg | ≥1200px can be a span value or an object containing props | Number|Object |  |
+| xs | <768px can be a span value or an object containing props | Number or Object |  |
+| sm | >768px can be a span value or an object containing props | Number or Object |  |
+| md | ≥992px can be a span value or an object containing props | Number or Object |  |
+| lg | ≥1200px can be a span value or an object containing props | Number or Object |  |
 ## examples
 ```html
     <Row>
