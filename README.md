@@ -5,7 +5,7 @@
 ```bash
 npm i simple-xgrid --save
 import Grid from 'simple-xgrid'
-Vue.use(Grid);
+Vue.use(Grid)
 ```
 ## Row Component
 ### row props
