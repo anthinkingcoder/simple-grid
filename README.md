@@ -16,7 +16,7 @@ use script
 <script src="dist/simple-grid.js"></script>
 ```
 ```
-  due to conflict,use script, you need change <col/> to <i-col><i-col/>。
+  due to conflict,use script, you need change <col><col/> to <i-col><i-col/>。
 ```
 
 
