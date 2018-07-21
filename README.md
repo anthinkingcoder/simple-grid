@@ -25,7 +25,7 @@ can excute this command -> npm build:extracss, to extracss.
 <!-- import Vue.js -->
 <script src="//vuejs.org/js/vue.min.js"></script>
 <!-- import simple-grid.css -->
-<link rel="stylesheet" href="dist/simple-css.css"></link>
+<link rel="stylesheet" href="dist/simple-grid.css"></link>
 <!-- import simple-grid.js -->
 <script src="dist/simple-grid.js"></script>
 ```
