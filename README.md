@@ -16,8 +16,20 @@ use script
 <script src="dist/simple-grid.js"></script>
 ```
 ```
-  due to conflict,use script, you need change <col><col/> to <i-col><i-col/>。
+due to conflict,use script, you need change <col><col/> to <i-col><i-col/>。
+
+use scirpt default simple-grid.js include css, if your don't want, your
+can excute this command -> npm build:extracss, to extracss.
 ```
+```html
+<!-- import Vue.js -->
+<script src="//vuejs.org/js/vue.min.js"></script>
+<!-- import simple-grid.css -->
+<link rel="stylesheet" href="dist/simple-css.css"></link>
+<!-- import simple-grid.js -->
+<script src="dist/simple-grid.js"></script>
+```
+
 
 
 ## Row Component
