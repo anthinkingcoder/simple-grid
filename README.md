@@ -2,11 +2,22 @@
 > a simple grid layout(Vue Component)
 
 ## Installation
+use npm
 ```bash
 npm i simple-xgrid --save
 import Grid from 'simple-xgrid'
 Vue.use(Grid)
 ```
+use script
+```html
+<!-- import Vue.js -->
+<script src="//vuejs.org/js/vue.min.js"></script>
+<!-- import simple-grid.js -->
+<script src="dist/simple-grid.js"></script>
+```
+due to conflict,in this mode, you need change <col/> to <i-col><i-col/>。
+
+
 ## Row Component
 ### row props
 | param | description | type | default |
