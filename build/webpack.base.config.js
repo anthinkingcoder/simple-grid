@@ -1,10 +1,8 @@
-var path = require('path');
-var webpack = require('webpack');
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+var path = require('path')
+var webpack = require('webpack')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
 function resolve (dir) {
-  return path.join(__dirname, '..', dir);
+  return path.join(__dirname, '..', dir)
 }
 function assetsPath (_path) {
   return path.posix.join('static', _path)
@@ -52,32 +50,6 @@ module.exports = {
         exclude: /node_modules/,
       },
       {
-        test: /\.scss$/,
-        use: [
-          {
-            loader: 'style-loader',
-            options: {
-              sourceMap: true,
-            },
-          },
-          {
-            loader: 'css-loader',
-            options: {
-              sourceMap: true,
-            },
-          },
-          {
-            loader: 'postcss-loader',
-          },
-          {
-            loader: 'sass-loader',
-            options: {
-              sourceMap: true,
-            },
-          }
-        ],
-      },
-      {
         test: /\.(gif|jpg|png|woff|svg|eot|ttf)\??.*$/,
         use: 'url-loader?limit=8192'
       },
@@ -85,14 +57,6 @@ module.exports = {
         test: /\.(html|tpl)$/,
         use: 'html-loader'
       }
-      // {
-      //   test: /\.scss$/,
-      //   use: ExtractTextPlugin.extract({
-      //     fallback: 'style-loader',
-      //     use: ['css-loader', 'autoprefixer-loader', 'sass-loader']
-      //   })
-      // },
-
     ],
   },
   resolve: {
@@ -109,15 +73,6 @@ module.exports = {
         NODE_ENV: '"production"'
       }
     }),
-    // new UglifyJsPlugin({
-    //   parallel: true,
-    //   sourceMap: true,
-
-    // }),
     new webpack.optimize.OccurrenceOrderPlugin(),
-    // new ExtractTextPlugin({
-    //   filename: 'simple-grid.css',
-    //   allChunks: false,
-    // })
   ]
 };
