@@ -15,7 +15,9 @@ use script
 <!-- import simple-grid.js -->
 <script src="dist/simple-grid.js"></script>
 ```
-due to conflict,in this mode, you need change <col/> to <i-col><i-col/>。
+```
+  due to conflict,in this mode, you need change <col/> to <i-col><i-col/>。
+```
 
 
 ## Row Component
