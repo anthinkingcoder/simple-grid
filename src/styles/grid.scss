@@ -66,6 +66,10 @@ $grid-col: 24;
     #{$col-prefix}-offset#{$viewport}-#{$i} {
       margin-left: percentage($i / $grid-col);
     }
+
+    #{$col-prefix}-order#{$viewport}-#{$i} {
+      order: #{$i};
+    }
   }
 }
 
