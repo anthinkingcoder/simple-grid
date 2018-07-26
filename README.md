@@ -46,7 +46,7 @@ can excute this command -> npm build:extracss, to extracss.
 | param | description | type | default |
 | :-: | :-: | :-: | :-: |
 | span | Column span. Value can be between 1 and 24. | Number |  |
-| order | Grid order when using flex layout. | Number |  |
+| order | Grid order when using flex layout. if auto responsive, value can only 1-24. | Number |  |
 | offset | Number of cells to the left of grid spacing. No cells can be inside the grid spacing. | Number |  |
 | push | Number of cells to move to the right | Number |  |
 | pull | Number of cells to move to the left | Number |  |
