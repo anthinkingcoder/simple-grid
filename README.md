@@ -98,10 +98,6 @@ can excute this command -> npm build:extracss, to extracss.
       <Col :xs="{ span: 11, offset: 1 }" :lg="{ span: 6, offset: 2 }" class="demo-col">Response-Col</Col>
       <Col :xs="{ span: 5, offset: 1 }" :lg="{ span: 6, offset: 2 }" class="demo-col">Response-Col</Col>
     </Row>
-    <Row type="flex">
-      <Col :xs="{ span: 8,order:1 }" :sm="{ span: 8,order:1 }" :md="{ span: 8,order:2 }" :lg="{ span: 8,order:2 }" class="demo-col">response-order-1</Col>
-      <Col :xs="{ span: 8,order:2 }" :sm="{ span: 8,order:2 }" :md="{ span: 8,order:1 }" :lg="{ span: 8,order:1 }" class="demo-col">Response-order-2</Col>
-    </Row>
     <br>
     <Row  type="flex" justify="space-between">
       <Col :span="4" class="demo-col">
@@ -156,6 +152,10 @@ can excute this command -> npm build:extracss, to extracss.
       order:3
       </Col>
     </Row>
+     <Row type="flex">
+          <Col :xs="{ span: 8,order:1 }" :sm="{ span: 8,order:1 }" :md="{ span: 8,order:2 }" :lg="{ span: 8,order:2 }" class="demo-col">response-order-1</Col>
+          <Col :xs="{ span: 8,order:2 }" :sm="{ span: 8,order:2 }" :md="{ span: 8,order:1 }" :lg="{ span: 8,order:1 }" class="demo-col">Response-order-2</Col>
+      </Row>
 ```
 ## result
 ![](http://ofn22jfef.bkt.clouddn.com/grid-demo.png)
