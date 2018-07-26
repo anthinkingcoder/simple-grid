@@ -158,4 +158,4 @@ can excute this command -> npm build:extracss, to extracss.
     </Row>
 ```
 ## result
-![](http://ofn22jfef.bkt.clouddn.com/grid.png)
+![](http://ofn22jfef.bkt.clouddn.com/grid-demo.png)
