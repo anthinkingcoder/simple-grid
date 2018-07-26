@@ -55,6 +55,7 @@ can excute this command -> npm build:extracss, to extracss.
 | md | ≥992px can be a span value or an object containing props | Number or Object |  |
 | lg | ≥1200px can be a span value or an object containing props | Number or Object |  |
 ## examples
+[see live demo](https://jsfiddle.net/anthinkingcoder/04phqm6L)
 ```html
     <Row>
       <Col :span="4" class="demo-col">span:4</Col>
