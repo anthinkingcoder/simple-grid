@@ -1,8 +1,18 @@
 const merge = require('webpack-merge')
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const webpackBaseConfig = require('./webpack.base.config.js')
-
+const util = require('./util')
+const resolve = util.resolve
+const assetsPath = util.assetsPath
 module.exports = merge(webpackBaseConfig, {
+  output: {
+    path: resolve('/dist'),
+    publicPath: "/dist/",
+    filename: 'simple-grid.js',
+    library: "simple-grid",
+    libraryTarget: "umd",
+    umdNamedDefine: true
+  },
   module: {
     rules: [
       {

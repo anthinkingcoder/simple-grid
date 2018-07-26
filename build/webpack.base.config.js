@@ -1,13 +1,9 @@
-var path = require('path')
-var webpack = require('webpack')
+const webpack = require('webpack')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
-function resolve (dir) {
-  return path.join(__dirname, '..', dir)
-}
-function assetsPath (_path) {
-  return path.posix.join('static', _path)
-}
-
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const util = require('./util')
+const resolve = util.resolve
+const assetsPath = util.assetsPath
 module.exports = {
   mode: 'production',
   entry: {
@@ -68,10 +64,9 @@ module.exports = {
   },
   plugins: [
     new VueLoaderPlugin(),
-    new webpack.DefinePlugin({
-      'precess.env': {
-        NODE_ENV: '"production"'
-      }
+    new UglifyJsPlugin({
+      parallel: true,
+      sourceMap: true,
     }),
     new webpack.optimize.OccurrenceOrderPlugin(),
   ]
