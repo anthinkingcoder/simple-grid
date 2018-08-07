@@ -1,6 +1,6 @@
 {
   "name": "simple-xgrid",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "a simple grid layout",
   "author": "anthinkingcoder jojo837769723@gmail.com",
   "private": false,
@@ -9,8 +9,7 @@
     "build": "webpack --config build/webpack.no.extracss.config.js",
     "build:extracss": "webpack --config build/webpack.extracss.config.js"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "i": "^0.3.6",
     "node-sass": "^4.9.2",
