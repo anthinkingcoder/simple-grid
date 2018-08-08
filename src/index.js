@@ -1,5 +1,4 @@
 import {Col, Row} from './components'
-import './styles/grid.scss'
 const install = function (Vue) {
   Vue.component('Col', Col);
   Vue.component('Row', Row);

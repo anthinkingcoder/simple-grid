@@ -78,12 +78,4 @@
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
-  /*@svg 1px-border {*/
-    /*height: 2px;*/
-    /*@rect {*/
-      /*fill: var(--color, black);*/
-      /*width: 100%;*/
-      /*height: 50%;*/
-    /*}*/
-  /*}*/
 </style>

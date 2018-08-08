@@ -4,31 +4,24 @@
 ## Installation
 use npm
 ```bash
-npm i simple-xgrid --save
+$ npm i simple-xgrid --save
+```
+```js
 import Grid from 'simple-xgrid'
+import  'simple-xgrid/dist/simple-grid.css'
 Vue.use(Grid)
+
 ```
 use script
 ```html
 <!-- import Vue.js -->
 <script src="//vuejs.org/js/vue.min.js"></script>
 <!-- import simple-grid.js -->
+<link href="dist/simple-grid.css">
 <script src="dist/simple-grid.js"></script>
-```
 ```
 due to conflict,use script, you need change <col><col/> to <i-col><i-col/>。
 
-use scirpt default simple-grid.js include css, if your don't want, your
-can excute this command -> npm build:extracss, to extracss.
-```
-```html
-<!-- import Vue.js -->
-<script src="//vuejs.org/js/vue.min.js"></script>
-<!-- import simple-grid.css -->
-<link rel="stylesheet" href="dist/simple-grid.css"></link>
-<!-- import simple-grid.js -->
-<script src="dist/simple-grid.js"></script>
-```
 
 
 

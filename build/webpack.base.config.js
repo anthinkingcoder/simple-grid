@@ -25,9 +25,6 @@ module.exports = {
       amd: 'vue'
     }
   },
-  resolve: {
-    extensions: ['', '.js', '.vue']
-  },
   module: {
     rules: [
       {
@@ -44,30 +41,14 @@ module.exports = {
           }
         ],
         exclude: /node_modules/,
-      },
-      {
-        test: /\.(gif|jpg|png|woff|svg|eot|ttf)\??.*$/,
-        use: 'url-loader?limit=8192'
-      },
-      {
-        test: /\.(html|tpl)$/,
-        use: 'html-loader'
       }
     ],
-  },
-  resolve: {
-    extensions: ['.js', '.vue'],
-    alias: {
-      'vue': 'vue/dist/vue.esm.js',
-      '@': resolve('src')
-    }
   },
   plugins: [
     new VueLoaderPlugin(),
     new UglifyJsPlugin({
       parallel: true,
-      sourceMap: true,
-    }),
-    new webpack.optimize.OccurrenceOrderPlugin(),
+      sourceMap: false,
+    })
   ]
 };
